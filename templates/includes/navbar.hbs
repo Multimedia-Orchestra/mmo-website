@@ -1,21 +1,38 @@
 ---
 component: navbar
 ---
-<nav role="navigation">
-  <div class="navbar-header">
-    <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#nav-collapse">
-      <span class="sr-only">toggle navigation</span>
-      <span class="icon-bar"></span>
-      <span class="icon-bar"></span>
-      <span class="icon-bar"></span>
-    </button>
-    <a class="navbar-brand" href="{{relative page "index.html"}}">holonomy</a>
-  </div>
-  <div class="navbar-collapse" id="nav-collapse">
-    <ul class="nav navbar-nav pull-left">
-      <li{{#is basename "moreinfo"}} class="active"{{/is}}>
-        <a href="{{relative page "moreinfo.html"}}">moreinfo</a>
-      </li>
-    </ul>
-  </div>
-</nav>
+
+<nav class="navbar navbar-fixed-top navbar-inverse" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="{{relative page "index.html"}}">MMO</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+          <ul class="nav navbar-nav">
+            <li{{#is basename "About"}} class="active"{{/is}}>
+              <a href="{{relative page "About.html"}}">About</a>
+            </li>
+            <li{{#is basename "Projects"}} class="active"{{/is}}>
+              <a href="{{relative page "Projects.html"}}">Projects</a>
+            </li>
+            <li{{#is basename "Press"}} class="active"{{/is}}>
+              <a href="{{relative page "Press.html"}}">Press</a>
+            </li>
+            <li{{#is basename "Chapters"}} class="active"{{/is}}>
+              <a href="{{relative page "Chapters.html"}}">Chapters</a>
+            </li>
+            <li{{#is basename "Connect"}} class="active"{{/is}}>
+              <a href="{{relative page "Connect.html"}}">Connect</a>
+            </li>
+          </ul>
+        </div><!-- /.navbar-collapse -->
+      </div><!-- /.container -->
+    </nav>

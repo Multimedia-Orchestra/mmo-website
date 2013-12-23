@@ -1,17 +1,17 @@
 {
-  "name": "holonomy-website",
+  "name": "mmo-website",
   "version": "0.1.0",
-  "description": "holonomy website",
+  "description": "Multimedia-Orchestra website",
   "repository": {
     "type": "git",
-    "url": "git://github.com/holonomy/website.git"
+    "url": "git://github.com/Multimedia-Orchestra/mmo-website.git"
   },
   "author": "",
   "license": "AGPLv3",
   "bugs": {
-    "url": "https://github.com/holonomy/website/issues"
+    "url": "https://github.com/Multimedia-Orchestra/mmo-website/issues"
   },
-  "homepage": "https://github.com/holonomy/website",
+  "homepage": "http://Multimedia-Orchestra.github.io",
   "dependencies": {
     "lodash": "~2.4.1",
     "bootstrap": "git+https://github.com/twitter/bootstrap.git#v3.0.3",
@@ -21,7 +21,8 @@
     "grunt-contrib-clean": "~0.5.0",
     "grunt-contrib-less": "~0.8.3",
     "grunt-contrib-connect": "~0.5.0",
-    "load-grunt-tasks": "~0.2.1"
+    "load-grunt-tasks": "~0.2.1",
+    "grunt-contrib-copy": "~0.4.1"
   },
   "devDependencies": {
     "grunt-contrib-jshint": "~0.7.2",

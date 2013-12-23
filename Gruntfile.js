@@ -29,7 +29,7 @@ module.exports = function(grunt) {
       options: {
         pkg: '<%= pkg %>',
         flatten: true,
-        assets: 'static/assets',
+        assets: 'assets',
         partials: ['templates/includes/*.hbs'],
         helpers: ['templates/helpers/*.js'],
         layout: 'templates/layouts/index.hbs',
@@ -70,6 +70,15 @@ module.exports = function(grunt) {
     // remove any previously-created files.
     clean: {
       build: ['build/**/*']
+    },
+
+    copy: {
+      assets: {
+        expand: true,
+        cwd: 'assets',
+        src: ['**'],
+        dest: 'build/',
+      },
     },
 
     connect: {
@@ -146,7 +155,7 @@ module.exports = function(grunt) {
       deploy: {
         options: {
           base: 'build',
-          repo: 'git@github.com:holonomy/holonomy.github.io',
+          repo: 'git@github.com:Mutlimedia-Orchestra/Multimedia-Orchestra.github.io',
           branch: 'master',
           message: banner,
         },
@@ -161,8 +170,8 @@ module.exports = function(grunt) {
   });
 
   // register grunt tasks
-  grunt.registerTask('develop', ['clean', 'jshint', 'assemble', 'less:develop', 'connect:develop', 'watch']);
-  grunt.registerTask('deploy', ['clean', 'jshint', 'assemble', 'less:deploy', 'compress', 'hashres', 'gh-pages']);
+  grunt.registerTask('develop', ['clean', 'jshint', 'assemble', 'less:develop', 'copy:assets', 'connect:develop', 'watch']);
+  grunt.registerTask('deploy', ['clean', 'jshint', 'assemble', 'less:deploy', 'copy:assets', 'compress', 'hashres', 'gh-pages']);
 
   // default task to be run.
   grunt.registerTask('default', ['clean', 'assemble', 'less:deploy', 'connect:default']);

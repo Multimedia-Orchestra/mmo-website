@@ -1,13 +1,13 @@
-# holonomy-website [![NPM version](https://badge.fury.io/js/holonomy-website.png)](http://badge.fury.io/js/holonomy-website)
+# mmo-website
 
-website for the [holonomy](https://github.com/holonomy/index) project built using [assemble](http://assemble.io/) and [grunt](gruntjs.com)
+website for the [Multimedia Orchestra](https://github.com/Multimedia-Orchestra) project built using [assemble](http://assemble.io/) and [grunt](gruntjs.com)
 
 ## how to
 
 ### install
 
 ```
-git clone https://github.com/holonomy/website
+git clone https://github.com/Multimedia-Orchestra/mmo-website
 npm install
 ```
 
